@@ -11,16 +11,16 @@ if (v_speed != 0) {
 }
 
 
-if (keyboard_check(ord("W"))) {
+if (keyboard_check(vk_up)) {
 	v_speed = -player_spd;
 }
-if (keyboard_check(ord("A"))) {
+if (keyboard_check(vk_left)) {
 	h_speed = -player_spd;
 }
-if (keyboard_check(ord("S"))) {
+if (keyboard_check(vk_down)) {
 	v_speed = player_spd;
 }
-if (keyboard_check(ord("D"))) {
+if (keyboard_check(vk_right)) {
 	h_speed = player_spd;
 }
 
