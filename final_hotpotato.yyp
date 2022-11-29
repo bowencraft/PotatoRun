@@ -3,6 +3,10 @@
   "resourceVersion": "1.6",
   "name": "final_hotpotato",
   "resources": [
+    {"id":{"name":"proto_tilemap","path":"tilesets/proto_tilemap/proto_tilemap.yy",},"order":1,},
+    {"id":{"name":"tilemap_packed","path":"sprites/tilemap_packed/tilemap_packed.yy",},"order":0,},
+    {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"order":0,},
+    {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
