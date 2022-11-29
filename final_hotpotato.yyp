@@ -3,10 +3,13 @@
   "resourceVersion": "1.6",
   "name": "final_hotpotato",
   "resources": [
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":2,},
     {"id":{"name":"proto_tilemap","path":"tilesets/proto_tilemap/proto_tilemap.yy",},"order":1,},
     {"id":{"name":"tilemap_packed","path":"sprites/tilemap_packed/tilemap_packed.yy",},"order":0,},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"order":0,},
+    {"id":{"name":"obj_player01","path":"objects/obj_player01/obj_player01.yy",},"order":1,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":1,},
+    {"id":{"name":"spr_player01","path":"sprites/spr_player01/spr_player01.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
