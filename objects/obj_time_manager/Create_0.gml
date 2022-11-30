@@ -4,5 +4,7 @@
 game_time = 60;
 game_timer = game_time * room_speed;
 
+global.Window_Width = window_get_width()
+global.Window_Height = window_get_height()
 
-
+is_fullscreen = false;
