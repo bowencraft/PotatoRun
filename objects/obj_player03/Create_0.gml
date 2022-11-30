@@ -12,13 +12,13 @@ power_amount = 0;
 power_object = noone;
 potato = noone;
 
-role = 1; // 1=potato, 0=human
+role = 0; // 1=potato, 0=human
 
-skill_button = ord("E");
-up_button = ord("W");
-left_button = ord("A");
-down_button = ord("S");
-right_button = ord("D");
+skill_button = gp_face1;
+up_button = gp_padu;
+left_button = gp_padl;
+down_button = gp_padd;
+right_button = gp_padr;
 
-inline_sprite = spr_player01;
-outline_sprite = spr_player01_outline;
+inline_sprite = spr_player03;
+outline_sprite = spr_player03_outline;
