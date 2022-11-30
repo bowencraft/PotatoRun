@@ -13,6 +13,24 @@ INPUT_DEFAULT_PROFILES = {
     
     keyboard_and_mouse:
     {
+		//p1_up:    [input_binding_key(obj_player01.up_button)],
+        //p1_down:  [input_binding_key(obj_player01.down_button)],
+        //p1_left:  [input_binding_key(obj_player01.left_button)],
+        //p1_right: [input_binding_key(obj_player01.right_button)],
+        //p1_power: [input_binding_key(obj_player01.skill_button)],
+		
+        
+        //p2_up:    [input_binding_key(obj_player02.up_button)],
+        //p2_down:  [input_binding_key(obj_player02.down_button)],
+        //p2_left:  [input_binding_key(obj_player02.left_button)],
+        //p2_right: [input_binding_key(obj_player02.right_button)],
+        //p2_power: [input_binding_key(obj_player02.skill_button)],
+        
+        //p3_up:    [input_binding_key(vk_up)],
+        //p3_down:  [input_binding_key(vk_up)],
+        //p3_left:  [input_binding_key(vk_up)],
+        //p3_right: [input_binding_key(vk_up)],
+        //p3_power: [input_binding_key(vk_up)],
         up:    [input_binding_key(vk_up),    input_binding_key("W")],
         down:  [input_binding_key(vk_down),  input_binding_key("S")],
         left:  [input_binding_key(vk_left),  input_binding_key("A")],
@@ -29,26 +47,26 @@ INPUT_DEFAULT_PROFILES = {
         pause: input_binding_key(vk_escape),
     },
     
-    //gamepad:
-    //{
-    //    up:    [input_binding_gamepad_axis(gp_axislv, true),  input_binding_gamepad_button(gp_padu)],
-    //    down:  [input_binding_gamepad_axis(gp_axislv, false), input_binding_gamepad_button(gp_padd)],
-    //    left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
-    //    right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
+    gamepad:
+    {
+        up:    [input_binding_gamepad_axis(gp_axislv, true),  input_binding_gamepad_button(gp_padu)],
+        down:  [input_binding_gamepad_axis(gp_axislv, false), input_binding_gamepad_button(gp_padd)],
+        left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
+        right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
         
-    //    accept:  input_binding_gamepad_button(gp_face1),
-    //    cancel:  input_binding_gamepad_button(gp_face2),
-    //    action:  input_binding_gamepad_button(gp_face3),
-    //    special: input_binding_gamepad_button(gp_face4),
+        accept:  input_binding_gamepad_button(gp_face1),
+        cancel:  input_binding_gamepad_button(gp_face2),
+        action:  input_binding_gamepad_button(gp_face3),
+        special: input_binding_gamepad_button(gp_face4),
         
-    //    aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
-    //    aim_down:  input_binding_gamepad_axis(gp_axisrv, false),
-    //    aim_left:  input_binding_gamepad_axis(gp_axisrh, true),
-    //    aim_right: input_binding_gamepad_axis(gp_axisrh, false),
-    //    shoot:     [input_binding_gamepad_button(gp_shoulderlb), input_binding_gamepad_button(gp_shoulderrb)],
+        aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
+        aim_down:  input_binding_gamepad_axis(gp_axisrv, false),
+        aim_left:  input_binding_gamepad_axis(gp_axisrh, true),
+        aim_right: input_binding_gamepad_axis(gp_axisrh, false),
+        shoot:     [input_binding_gamepad_button(gp_shoulderlb), input_binding_gamepad_button(gp_shoulderrb)],
         
-    //    pause: input_binding_gamepad_button(gp_start),
-    //},
+        pause: input_binding_gamepad_button(gp_start),
+    },
     
 };
 
