@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_exploded",
+  "name": "obj_bump",
   "spriteId": {
-    "name": "spr_exploded",
-    "path": "sprites/spr_exploded/spr_exploded.yy",
+    "name": "spr_bump",
+    "path": "sprites/spr_bump/spr_bump.yy",
   },
   "solid": false,
   "visible": true,

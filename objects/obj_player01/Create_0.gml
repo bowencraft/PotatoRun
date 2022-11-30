@@ -9,6 +9,9 @@ v_speed = 0;
 powering = false;
 power_amount = 0;
 
+dizzy = false;
+dizzy_timer = 0;
+
 power_object = noone;
 potato = noone;
 

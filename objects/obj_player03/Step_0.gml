@@ -3,6 +3,14 @@
 
 depth = -y;
 
+if (dizzy) {
+	if (dizzy_timer > 0) {
+		dizzy_timer --;
+	} else {
+		dizzy = false;
+	}
+}
+
 if (role == 1) {
 	sprite_index = outline_sprite;
 	if (obj_time_manager.game_timer < 5 * room_speed) {
@@ -30,8 +38,7 @@ if (h_speed != 0) {
 if (v_speed != 0) {
 	v_speed *= player_fric;
 }
-
-if (role != 1 || !gamepad_button_check(0,skill_button)) {
+if ((!gamepad_button_check(0,skill_button)) && !dizzy) {
 	gamepad_ver = gamepad_axis_value(0, gp_axislv);
 	gamepad_hor = gamepad_axis_value(0, gp_axislh);
 	show_debug_message(string(gamepad_ver) + ", " + string(gamepad_hor));
@@ -71,6 +78,7 @@ if (role == 1) {
 			power_object = instance_create_layer(x,y,"Powers",obj_power01);
 		} else {
 			if (power_amount < 100) {
+				gamepad_set_vibration(0, power_amount, power_amount);
 				power_amount ++;
 			}
 		}
@@ -93,9 +101,45 @@ if (role == 1) {
 		if (potato != noone) {
 			potato.role = 1;
 			role = 0;
+			potato.dizzy = true;
+			potato.dizzy_timer = 1 * room_speed;
 			instance_create_layer(potato.x,potato.y,"Assets",obj_sign_change);
 			potato = noone;
 		}
 	}
 	
+} else {
+	if (gamepad_button_check(0,skill_button)) {
+		if (!powering) {
+			powering = true;
+			power_object = instance_create_layer(x,y,"Powers",obj_power02);
+		} else {
+			if (power_amount < 100) {
+				power_amount ++;
+			}
+		}
+		
+		scale_var = (1 + 0.02* power_amount);
+		
+		power_object.image_xscale = scale_var;
+		power_object.image_yscale = scale_var;
+		
+		potato = collision_ellipse(x-scale_var*18,y-scale_var*18,x+scale_var*18,y+scale_var*18,obj_players,0,true);
+		
+	} else {
+		
+		
+		instance_destroy(power_object);
+		powering = false;	
+		power_amount = 0;
+		power_object = noone;
+		
+		if (potato != noone) {
+			
+			potato.dizzy = true;
+			potato.dizzy_timer = 1 * room_speed;
+			instance_create_layer(potato.x,potato.y,"Assets",obj_bump);
+			potato = noone;
+		}
+	}
 }

@@ -16,4 +16,8 @@
 //	}
 //}
 
+if (dizzy) {
+	draw_text_transformed(x-18,y+6,"Dizzying...",0.5,0.5,0);
+}
+
 draw_self();

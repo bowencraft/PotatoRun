@@ -6,6 +6,8 @@ player_fric = 0.7;
 h_speed = 0;
 v_speed = 0;
 
+dizzy = false;
+dizzy_timer = 0;
 powering = false;
 power_amount = 0;
 
