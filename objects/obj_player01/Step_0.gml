@@ -3,11 +3,28 @@
 
 depth = -y;
 
+
 if (role == 1) {
 	sprite_index = outline_sprite;
+	if (obj_time_manager.game_timer < 5 * room_speed) {
+		if (obj_time_manager.game_timer % 15 > 7) {
+			sprite_index = outline_sprite;
+		} else {
+			sprite_index = inline_sprite;
+		}
+	}
+	if (obj_time_manager.game_timer == 0) {
+		visible = false;
+		instance_create_layer(x,y,"Assets",obj_exploded);
+	}
+	player_spd = 2.5;
 } else {
 	sprite_index = inline_sprite;
+	player_spd = 2;
 }
+
+
+
 
 if (h_speed != 0) {
 	h_speed *= player_fric;
@@ -62,7 +79,7 @@ if (role == 1) {
 		power_object.image_xscale = scale_var;
 		power_object.image_yscale = scale_var;
 		
-		potato = collision_ellipse(x-scale_var*36,y-scale_var*36,x+scale_var*36,y+scale_var*36,obj_players,0,true);
+		potato = collision_ellipse(x-scale_var*18,y-scale_var*18,x+scale_var*18,y+scale_var*18,obj_players,0,true);
 		
 	} else {
 		
