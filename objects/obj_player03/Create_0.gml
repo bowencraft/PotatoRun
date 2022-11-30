@@ -15,10 +15,10 @@ potato = noone;
 role = 0; // 1=potato, 0=human
 
 skill_button = gp_face1;
-up_button = gp_padu;
-left_button = gp_padl;
-down_button = gp_padd;
-right_button = gp_padr;
+up_button = vk_up;
+left_button = vk_up;
+down_button = vk_up;
+right_button = vk_up;
 
 inline_sprite = spr_player03;
 outline_sprite = spr_player03_outline;

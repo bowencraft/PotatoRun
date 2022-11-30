@@ -31,21 +31,23 @@ if (v_speed != 0) {
 	v_speed *= player_fric;
 }
 
-if (role != 1 || !keyboard_check(skill_button)) {
-	if (keyboard_check(up_button)) {
-		v_speed = -player_spd;
+if (role != 1 || !gamepad_button_check(0,skill_button)) {
+	gamepad_ver = gamepad_axis_value(0, gp_axislv);
+	gamepad_hor = gamepad_axis_value(0, gp_axislh);
+	show_debug_message(string(gamepad_ver) + ", " + string(gamepad_hor));
+	if (abs(gamepad_ver) > 0.1) {
+		v_speed = gamepad_ver *2;
 	}
-	if (keyboard_check(left_button)) {
-		h_speed = -player_spd;
+	if (abs(gamepad_hor) > 0.1) {
+		h_speed = gamepad_hor *2;
+	}
+		
+	if (gamepad_axis_value(0, gamepad_hor) < 0.1) {
 		image_xscale = -1;
-	}
-	if (keyboard_check(down_button)) {
-		v_speed = player_spd;
-	}
-	if (keyboard_check(right_button)) {
-		h_speed = player_spd;
+	} else if (gamepad_axis_value(0, gamepad_hor) > 0.1) {
 		image_xscale = 1;
 	}
+	
 }
 
 
@@ -62,7 +64,8 @@ x += h_speed;
 y += v_speed;
 
 if (role == 1) {
-	if (keyboard_check(skill_button)) {
+	if (gamepad_button_check(0,skill_button)) {
+		show_debug_message("Pressed gamepad A!")
 		if (!powering) {
 			powering = true;
 			power_object = instance_create_layer(x,y,"Powers",obj_power01);
@@ -77,7 +80,7 @@ if (role == 1) {
 		power_object.image_xscale = scale_var;
 		power_object.image_yscale = scale_var;
 		
-		potato = collision_ellipse(x-scale_var*36,y-scale_var*36,x+scale_var*36,y+scale_var*36,obj_players,0,true);
+		potato = collision_ellipse(x-scale_var*18,y-scale_var*18,x+scale_var*18,y+scale_var*18,obj_players,0,true);
 		
 	} else {
 		
