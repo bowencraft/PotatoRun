@@ -40,6 +40,7 @@
     {"id":{"name":"spr_player03","path":"sprites/spr_player03/spr_player03.yy",},"order":10,},
     {"id":{"name":"Room_playerSelect","path":"rooms/Room_playerSelect/Room_playerSelect.yy",},"order":1,},
     {"id":{"name":"obj_power01","path":"objects/obj_power01/obj_power01.yy",},"order":4,},
+    {"id":{"name":"script_char","path":"scripts/script_char/script_char.yy",},"order":1,},
     {"id":{"name":"spr_ch15","path":"sprites/spr_ch15/spr_ch15.yy",},"order":14,},
     {"id":{"name":"obj_sign_change","path":"objects/obj_sign_change/obj_sign_change.yy",},"order":6,},
     {"id":{"name":"spr_ch11","path":"sprites/spr_ch11/spr_ch11.yy",},"order":10,},

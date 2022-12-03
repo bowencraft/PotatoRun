@@ -13,12 +13,22 @@ sprite_scale = 4;
 input_ls = ds_list_create();
 player_ls = ds_list_create();
 
+player_amount = 0;
+
 /** ---
 players join & select
 - input method: 0 - WASD 1 - ARRW 2 - GMPD0 3 - GMPD1 4 - AI
 - player max: 4
 --- **/
 
+plr_origin_x = room_width / 2;
+plr_origin_y = 80;
+plr_interval_2 = 64;
+plr_interval_3 = 48;
+plr_interval_4 = 32;
+
+plr_sprite_size = 96;
+plr_sprite_scale = 6;
 
 
 

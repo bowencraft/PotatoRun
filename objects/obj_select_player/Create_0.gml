@@ -28,7 +28,7 @@ sel = 15;
 box_x = 0;
 box_y = 0;
 
-controller_cooldown = 0.3;
+controller_cooldown = 0.15;
 
 /** ---
 character placement 

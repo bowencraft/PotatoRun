@@ -6,11 +6,29 @@
 
 if (input_method == 0) {
 
-	if (keyboard_check_pressed(ord("E"))) {
+	if (keyboard_check_pressed(vk_space)) {
 		if (!ready_status) {
 			ready_status = true;
 		}
 	}
+	
+	if (keyboard_check_pressed(ord("Q"))) {
+		if (ready_status) {
+			ready_status = false;
+		} else {
+			
+			temp_index = ds_list_find_index(obj_select_room.player_ls,self);
+			ds_list_delete(obj_select_room.player_ls,temp_index);
+			
+			temp_index = ds_list_find_index(obj_select_room.input_ls,"WASD");
+			ds_list_delete(obj_select_room.input_ls,temp_index);
+			
+			obj_select_room.player_amount --;
+			instance_destroy(self);
+			
+		}
+	}
+	
 	
 	if (keyboard_check_pressed(ord("W"))) {
 		if (!ready_status) {
@@ -113,7 +131,7 @@ if (input_method == 0) {
 		show_debug_message("controller 0 get ready!");
 	}
 	
-	if (gamepad_axis_value(0, gp_axislv) < -0.1) {
+	if (gamepad_axis_value(0, gp_axislv) < -0.5) {
 		//show_debug_message(gamepad_axis_value(0, gp_axislv));
 		if (!ready_status) {
 			if (controller_timer1 > 0) {
@@ -131,7 +149,7 @@ if (input_method == 0) {
 		}
 	}
 	
-	if (gamepad_axis_value(0, gp_axislv) > 0.1) {
+	if (gamepad_axis_value(0, gp_axislv) > 0.5) {
 		if (!ready_status) {
 			if (controller_timer1 > 0) {
 				controller_timer1 --;
@@ -148,7 +166,7 @@ if (input_method == 0) {
 		}
 	}
 	
-	if (gamepad_axis_value(0, gp_axislh) < -0.1) {
+	if (gamepad_axis_value(0, gp_axislh) < -0.5) {
 		if (!ready_status) {
 			if (controller_timer1 > 0) {
 				controller_timer1 --;
@@ -165,7 +183,7 @@ if (input_method == 0) {
 			
 		}
 	}
-	if (gamepad_axis_value(0, gp_axislh) > 0.1) {
+	if (gamepad_axis_value(0, gp_axislh) > 0.5) {
 		if (!ready_status) {
 			if (controller_timer1 > 0) {
 				controller_timer1 --;
@@ -189,7 +207,7 @@ if (input_method == 0) {
 		}
 	}
 	
-	if (gamepad_axis_value(1, gp_axislv) < -0.2) {
+	if (gamepad_axis_value(1, gp_axislv) < -0.5) {
 		if (!ready_status) {
 			if (controller_timer2 > 0) {
 				controller_timer2 --;
@@ -206,7 +224,7 @@ if (input_method == 0) {
 		}
 	}
 	
-	if (gamepad_axis_value(1, gp_axislv) > 0.2) {
+	if (gamepad_axis_value(1, gp_axislv) > 0.5) {
 		if (!ready_status) {
 			if (controller_timer2 > 0) {
 				controller_timer2 --;
@@ -223,7 +241,7 @@ if (input_method == 0) {
 		}
 	}
 	
-	if (gamepad_axis_value(1, gp_axislh) < -0.2) {
+	if (gamepad_axis_value(1, gp_axislh) < -0.5) {
 		if (!ready_status) {
 			if (controller_timer2 > 0) {
 				controller_timer2 --;
@@ -239,7 +257,7 @@ if (input_method == 0) {
 			}
 		}
 	}
-	if (gamepad_axis_value(1, gp_axislh) > 0.2) {
+	if (gamepad_axis_value(1, gp_axislh) > 0.5) {
 		if (!ready_status) {
 			if (controller_timer2 > 0) {
 				controller_timer2 --;
@@ -256,7 +274,6 @@ if (input_method == 0) {
 		}
 	}
 }
-
 
 // set selection & box x-y 
 
