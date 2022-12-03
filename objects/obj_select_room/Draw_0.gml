@@ -19,52 +19,92 @@ draw_sprite_ext(spr_ch13,0,char_spr_x_3,char_spr_y_3,sprite_scale,sprite_scale,0
 draw_sprite_ext(spr_ch14,0,char_spr_x_4,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
 draw_sprite_ext(spr_ch15,0,char_spr_x_5,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
 
-
-//plr_origin_x = room_width / 2;
-//plr_origin_y = 60;
-//plr_interval_2 = 32;
-//plr_interval_3 = 24;
-//plr_interval_4 = 16;
-
-//plr_sprite_size = 96;
-//plr_sprite_scale = 6;
-//show_debug_message(string(player_ls[|0]) + ", " + string(player_ls[|1]) + ", " + string(player_ls[|2]) + ", " + string(player_ls[|3]))
-
 if (player_amount == 1) {
+	plr1_x = plr_origin_x;
+	
+	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
-
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	
+	text_width = string_width("P1");
+	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P1", c_white,c_white,c_white,c_white,1);
 	
 } else if (player_amount == 2) {
+	plr1_x = plr_origin_x - 0.5 * plr_sprite_size - 0.5 * plr_interval_2;
+	plr2_x = plr_origin_x + 0.5 * plr_interval_2;
 	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x - 1 * plr_sprite_size - 0.5 * plr_interval_2,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	
+	text_width = string_width("P1");
+	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2, plr_origin_y - 2,
+	"P1", c_white,c_white,c_white,c_white,1);
 
 	temp_player = ds_list_find_value(player_ls,1);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x + 0.5 * plr_interval_2,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	
+	text_width = string_width("P2");
+	draw_text_color(plr2_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P2", c_white,c_white,c_white,c_white,1);
 
 } else if (player_amount == 3) {
+	plr1_x = plr_origin_x - 1 * plr_sprite_size - 1 * plr_interval_3;
+	plr2_x = plr_origin_x;
+	plr3_x = plr_origin_x +  1 * plr_sprite_size + 1 * plr_interval_3;
+	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x - 1.5 * plr_sprite_size - 1 * plr_interval_3,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	
+	text_width = string_width("P1");
+	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P1", c_white,c_white,c_white,c_white,1);
 
 	temp_player = ds_list_find_value(player_ls,1);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	
+	text_width = string_width("P2");
+	draw_text_color(plr2_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P2", c_white,c_white,c_white,c_white,1);
 
 	temp_player = ds_list_find_value(player_ls,2);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x +  0.5 * plr_sprite_size + 1 * plr_interval_3,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr3_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	
+	text_width = string_width("P3");
+	draw_text_color(plr3_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P3", c_white,c_white,c_white,c_white,1);
 
 } else if (player_amount == 4) {
+	
+	plr1_x = plr_origin_x - 1.5 * plr_sprite_size - 1.5 * plr_interval_4;
+	plr2_x = plr_origin_x - 1 * plr_sprite_size - 0.5 * plr_interval_4;
+	plr3_x = plr_origin_x + 0.5 * plr_interval_4;
+	plr4_x = plr_origin_x + 1 * plr_sprite_size + 1.5 * plr_interval_4;
+	
+	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x - 2 * plr_sprite_size - 1.5 * plr_interval_4,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	text_width = string_width("P1");
+	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P1", c_white,c_white,c_white,c_white,1);
 
 	temp_player = ds_list_find_value(player_ls,1);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x - 1 * plr_sprite_size - 0.5 * plr_interval_4,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	text_width = string_width("P2");
+	draw_text_color(plr2_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P2", c_white,c_white,c_white,c_white,1);
 
 	temp_player = ds_list_find_value(player_ls,2);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x + 0.5 * plr_interval_4,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr3_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	text_width = string_width("P3");
+	draw_text_color(plr3_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
+	"P3", c_white,c_white,c_white,c_white,1);
 
 	temp_player = ds_list_find_value(player_ls,3);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr_origin_x + 1 * plr_sprite_size + 1.5 * plr_interval_4,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr4_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	text_width = string_width("P4");
+	draw_text_color(plr4_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2, 
+	"P4", c_white,c_white,c_white,c_white,1);
 
 }
 

@@ -2,6 +2,7 @@
 // 你可以在此编辑器中写入代码 
 
 // input method
+//show_debug_message(string(obj_select_room.player_ls[|0]) + ", " + string(obj_select_room.player_ls[|1]) + ", " + string(obj_select_room.player_ls[|2]) + ", " + string(obj_select_room.player_ls[|3]))
 
 
 if (input_method == 0) {
@@ -17,10 +18,10 @@ if (input_method == 0) {
 			ready_status = false;
 		} else {
 			
-			temp_index = ds_list_find_index(obj_select_room.player_ls,self);
+			temp_index = player_index;
 			ds_list_delete(obj_select_room.player_ls,temp_index);
 			
-			temp_index = ds_list_find_index(obj_select_room.input_ls,"WASD");
+			temp_index = player_index;
 			ds_list_delete(obj_select_room.input_ls,temp_index);
 			
 			obj_select_room.player_amount --;
@@ -80,6 +81,23 @@ if (input_method == 0) {
 		}
 	}
 	
+	if (keyboard_check_pressed(ord("M"))) {
+		if (ready_status) {
+			ready_status = false;
+		} else {
+			
+			temp_index = player_index;
+			ds_list_delete(obj_select_room.player_ls,temp_index);
+			
+			temp_index = player_index;
+			ds_list_delete(obj_select_room.input_ls,temp_index);
+			
+			obj_select_room.player_amount --;
+			instance_destroy(self);
+			
+		}
+	}
+	
 	if (keyboard_check_pressed(vk_up)) {
 		if (!ready_status) {
 			if (sel_x > 0) {
@@ -129,6 +147,23 @@ if (input_method == 0) {
 			ready_status = true;
 		}
 		show_debug_message("controller 0 get ready!");
+	}
+	
+	if (gamepad_button_check_pressed(0,gp_face2)) {
+		if (ready_status) {
+			ready_status = false;
+		} else {
+			
+			temp_index = player_index;
+			ds_list_delete(obj_select_room.player_ls,temp_index);
+			
+			temp_index = player_index;
+			ds_list_delete(obj_select_room.input_ls,temp_index);
+			
+			obj_select_room.player_amount --;
+			instance_destroy(self);
+			
+		}
 	}
 	
 	if (gamepad_axis_value(0, gp_axislv) < -0.5) {
@@ -207,6 +242,22 @@ if (input_method == 0) {
 		}
 	}
 	
+	if (gamepad_button_check_pressed(1,gp_face2)) {
+		if (ready_status) {
+			ready_status = false;
+		} else {
+			
+			temp_index = player_index;
+			ds_list_delete(obj_select_room.player_ls,temp_index);
+			
+			temp_index = player_index;
+			ds_list_delete(obj_select_room.input_ls,temp_index);
+			
+			obj_select_room.player_amount --;
+			instance_destroy(self);
+			
+		}
+	}
 	if (gamepad_axis_value(1, gp_axislv) < -0.5) {
 		if (!ready_status) {
 			if (controller_timer2 > 0) {
@@ -348,6 +399,7 @@ if (sel_x == 0) {
 
 box_x = lerp(box_x,box_goal_x,0.2);
 box_y = lerp(box_y,box_goal_y,0.2);
+box_scale = lerp(box_scale,box_goal_scale,0.1);
 
 box_x = axisShake(box_x,x_intensity,1,shake_speed,instant_tick_x);
 box_y = axisShake(box_y,y_intensity,1,shake_speed,instant_tick_y);

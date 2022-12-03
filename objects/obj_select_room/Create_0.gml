@@ -4,16 +4,12 @@
 
 
 char_origin_x = room_width / 2;
-char_origin_y = 300;
+char_origin_y = 350;
 x_intervel = 32;
 y_intervel = 32;
 sprite_size = 64;
 sprite_scale = 4;
 
-input_ls = ds_list_create();
-player_ls = ds_list_create();
-
-player_amount = 0;
 
 /** ---
 players join & select
@@ -22,10 +18,10 @@ players join & select
 --- **/
 
 plr_origin_x = room_width / 2;
-plr_origin_y = 80;
-plr_interval_2 = 64;
-plr_interval_3 = 48;
-plr_interval_4 = 32;
+plr_origin_y = 140;
+plr_interval_2 = 96;
+plr_interval_3 = 64;
+plr_interval_4 = 48;
 
 plr_sprite_size = 96;
 plr_sprite_scale = 6;
@@ -38,6 +34,7 @@ character placement
 - characters size: 3
 - sel range: x - 0-2 y - 0-4
 --- **/
+
 characters[0][0] = 1;
 characters[0][1] = 2;
 characters[0][2] = 3;
@@ -65,3 +62,8 @@ char_spr_y_2 = char_origin_y + sprite_size + y_intervel;
 char_spr_y_3 = char_origin_y + 2 * sprite_size + 2 * y_intervel;
 
 global.room_run_tick = 0;
+
+input_ls = ds_list_create();
+player_ls = ds_list_create();
+
+player_amount = 0;
