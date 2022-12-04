@@ -4,7 +4,7 @@
 
 
 char_origin_x = room_width / 2;
-char_origin_y = 350;
+char_origin_y = 320;
 x_intervel = 32;
 y_intervel = 32;
 sprite_size = 64;
@@ -18,9 +18,9 @@ players join & select
 --- **/
 
 plr_origin_x = room_width / 2;
-plr_origin_y = 140;
-plr_interval_2 = 96;
-plr_interval_3 = 64;
+plr_origin_y = 100;
+plr_interval_2 = 192;
+plr_interval_3 = 96;
 plr_interval_4 = 48;
 
 plr_sprite_size = 96;

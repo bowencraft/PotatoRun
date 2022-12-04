@@ -18,8 +18,8 @@ ready_status = false;
 
 controller_cooldown = 0.15;
 
-box_scale = 10;
-box_goal_scale = 1;
+box_scale = 32;
+box_goal_scale = 8;
 
 /** ---
 shake config
