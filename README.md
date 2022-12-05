@@ -10,6 +10,7 @@ itch.io page: https://bowenwang0620.itch.io/powerpotato
 - [ ] Different Maps (tiles)
 - [ ] Main Menu & Setting page
 - [ ] Different characters animation
+- [ ] ability cooldown
 - [ ] Screen vibration
 - [ ] Win page
 - [ ] Transition sequence animation
