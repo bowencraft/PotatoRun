@@ -3,7 +3,9 @@
 
 persistent = true;
 
-input_ls = obj_select_room.input_ls;
-player_ls = obj_select_room.player_ls;
+input_method_ls = ds_list_create();
+player_index_ls = ds_list_create();
+character_ls = ds_list_create();
+role_ls = ds_list_create();
 
 player_amount = 0;

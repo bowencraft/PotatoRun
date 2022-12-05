@@ -3,5 +3,5 @@
 cam_width = 300;
 
 
-x = (obj_player01.x + obj_player02.x)/2;
-y = (obj_player01.y + obj_player02.y)/2;
+x = room_width /2;
+y = room_height /2;

@@ -11,6 +11,8 @@ players join & select
 player_index = 0;
 input_method = 0;
 
+role = 0;
+
 sel_x = 0; // 0-2
 sel_y = 0; // 0-4
 
@@ -51,6 +53,10 @@ char_spr_y_3 = obj_select_room.char_spr_y_3;
 sel = 15;
 box_x = char_spr_x_1;
 box_y = char_spr_y_1;
+
+box_offset_x = -32;
+box_offset_y = -64;
+
 
 box_goal_x = char_spr_x_1;
 box_goal_y = char_spr_y_1;

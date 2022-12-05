@@ -3,8 +3,8 @@
 
 
 
-char_origin_x = room_width / 2;
-char_origin_y = 320;
+char_origin_x = room_width / 2 + 32;
+char_origin_y = 320 + 64;
 x_intervel = 32;
 y_intervel = 32;
 sprite_size = 64;
@@ -19,6 +19,10 @@ players join & select
 
 plr_origin_x = room_width / 2;
 plr_origin_y = 100;
+plr_offset_x = 48;
+plr_offset_y = 96;
+
+
 plr_interval_2 = 192;
 plr_interval_3 = 96;
 plr_interval_4 = 48;
@@ -65,5 +69,11 @@ global.room_run_tick = 0;
 
 input_ls = ds_list_create();
 player_ls = ds_list_create();
+
+input_method_ls = ds_list_create();
+player_index_ls = ds_list_create();
+character_ls = ds_list_create();
+role_ls = ds_list_create();
+
 
 player_amount = 0;

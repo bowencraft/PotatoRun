@@ -35,7 +35,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game_room",
-    "path": "folders/Objects/Game_room.yy",
+    "name": "Deprecated",
+    "path": "folders/Objects/Deprecated.yy",
   },
 }

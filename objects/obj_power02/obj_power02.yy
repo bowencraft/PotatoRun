@@ -30,7 +30,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game_room",
-    "path": "folders/Objects/Game_room.yy",
+    "name": "Ingame_items",
+    "path": "folders/Objects/Ingame_items.yy",
   },
 }

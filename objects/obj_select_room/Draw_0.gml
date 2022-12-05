@@ -33,14 +33,6 @@ if (player_amount == 0){
 if (player_amount >= 2) {
 	draw_sprite_ext(wait_ready,0,plr_origin_x,room_height - 170,1,1,0,c_white,1);
 	
-	all_ready = true;
-	for (var i=0;i<ds_list_size(player_ls);i++) {
-		temp_player = ds_list_find_value(player_ls,0);
-		if (temp_player.ready_status == false)	all_ready = false;
-	}
-	if (all_ready) {
-		show_debug_message("Game start!");
-	}
 }
 
 if (player_amount == 1) {
@@ -48,7 +40,7 @@ if (player_amount == 1) {
 	draw_sprite_ext(player_requirement,0,plr_origin_x,room_height - 170,1,1,0,c_white,1);
 	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	
 	text_width = string_width("P1");
 	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
@@ -72,13 +64,11 @@ if (player_amount == 1) {
 	plr2_x = plr_origin_x + 0.5 * plr_interval_2;
 	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	
 	text_width = string_width("P1");
 	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2, plr_origin_y - 2,
 	"P1", c_white,c_white,c_white,c_white,1);
-	
-	show_debug_message(string(player_amount) + string(temp_player.input_method));
 	if (temp_player.ready_status) {
 		draw_sprite_ext(ready,0,plr1_x,plr_origin_y + 100,1,1,0,c_white,1);
 	} else {
@@ -94,7 +84,7 @@ if (player_amount == 1) {
 
 
 	temp_player = ds_list_find_value(player_ls,1);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	
 	text_width = string_width("P2");
 	draw_text_color(plr2_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
@@ -118,7 +108,7 @@ if (player_amount == 1) {
 	plr3_x = plr_origin_x +  1 * plr_sprite_size + 1 * plr_interval_3;
 	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	
 	text_width = string_width("P1");
 	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
@@ -137,7 +127,7 @@ if (player_amount == 1) {
 	}
 
 	temp_player = ds_list_find_value(player_ls,1);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	
 	text_width = string_width("P2");
 	draw_text_color(plr2_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
@@ -156,7 +146,7 @@ if (player_amount == 1) {
 	}
 
 	temp_player = ds_list_find_value(player_ls,2);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr3_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr3_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	
 	text_width = string_width("P3");
 	draw_text_color(plr3_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
@@ -183,7 +173,7 @@ if (player_amount == 1) {
 	
 	
 	temp_player = ds_list_find_value(player_ls,0);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr1_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	text_width = string_width("P1");
 	draw_text_color(plr1_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
 	"P1", c_white,c_white,c_white,c_white,1);
@@ -201,7 +191,7 @@ if (player_amount == 1) {
 
 
 	temp_player = ds_list_find_value(player_ls,1);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr2_x - 0.5 * plr_sprite_size + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	text_width = string_width("P2");
 	draw_text_color(plr2_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
 	"P2", c_white,c_white,c_white,c_white,1);
@@ -219,7 +209,7 @@ if (player_amount == 1) {
 	}
 	
 	temp_player = ds_list_find_value(player_ls,2);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr3_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr3_x - 0.5 * plr_sprite_size +plr_offset_x + plr_offset_x,plr_origin_y + plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	text_width = string_width("P3");
 	draw_text_color(plr3_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2,
 	"P3", c_white,c_white,c_white,c_white,1);
@@ -238,7 +228,7 @@ if (player_amount == 1) {
 
 
 	temp_player = ds_list_find_value(player_ls,3);
-	draw_sprite_ext(script_char(temp_player.sel),0,plr4_x - 0.5 * plr_sprite_size,plr_origin_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
+	draw_sprite_ext(script_char(temp_player.sel),0,plr4_x - 0.5 * plr_sprite_size +plr_offset_x,plr_origin_y +plr_offset_y,plr_sprite_scale,plr_sprite_scale,0,c_white,1);
 	text_width = string_width("P4");
 	draw_text_color(plr4_x - 0.5 * plr_sprite_size - text_width/2,plr_origin_y - 2, 
 	"P4", c_white,c_white,c_white,c_white,1);

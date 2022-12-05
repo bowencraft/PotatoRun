@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game_room",
-    "path": "folders/Objects/Game_room.yy",
+    "name": "Placeholders",
+    "path": "folders/Objects/Placeholders.yy",
   },
 }

@@ -3,6 +3,27 @@
 
 global.room_run_tick ++;
 
+for (var i=0;i<ds_list_size(player_ls);i++) {
+	
+	ds_list_set(input_method_ls,i,player_ls[|i].input_method);
+	ds_list_set(player_index_ls,i,player_ls[|i].player_index);
+	ds_list_set(character_ls,i,player_ls[|i].sel);
+	ds_list_set(role_ls,i,player_ls[|i].role);
+
+}
+
+if (player_amount >= 2) {
+	all_ready = true;
+	for (var i=0;i<ds_list_size(player_ls);i++) {
+		temp_player = ds_list_find_value(player_ls,i);
+		if (temp_player.ready_status == false)	all_ready = false;
+	}
+	if (all_ready) {
+		show_debug_message("Game start!");
+		//alarm[0] = 1*room_speed;
+		room_goto(Room1);
+	}
+}
 
 
 if (keyboard_check_pressed(vk_space)) {
@@ -48,3 +69,10 @@ if (gamepad_button_check_pressed(1,gp_face1)) {
 		player_amount ++;
 	}
 }
+
+obj_parameters.input_method_ls = input_method_ls;
+obj_parameters.player_index_ls = player_index_ls;
+obj_parameters.character_ls = character_ls;
+obj_parameters.role_ls = role_ls;
+
+obj_parameters.player_amount = player_amount;
