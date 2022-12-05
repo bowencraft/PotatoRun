@@ -5,7 +5,7 @@ itch.io page: https://bowenwang0620.itch.io/powerpotato
 
 
 
-To-do List:
+## To-do List:
 
 - [ ] Different Maps (tiles)
 - [ ] Main Menu & Setting page
