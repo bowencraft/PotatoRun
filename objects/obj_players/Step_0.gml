@@ -82,8 +82,13 @@ if (role == 1) {
 
 
 
+if (floors == 1){
+	depth = -y;
 
-depth = -y;
+} else {
+
+	depth = - 1200 - y;
+}
 
 if (dizzy) {
 	if (dizzy_timer > 0) {
@@ -102,13 +107,31 @@ if (v_speed != 0) {
 	v_speed *= player_fric;
 }
 
-if (instance_place(x + h_speed,y,obj_collision)) {
-	h_speed = 0;
+if (floors == 1) {
+	if (instance_place(x + h_speed,y,obj_collision)) {
+		h_speed = 0;
+	}
+
+	if (instance_place(x,y + v_speed,obj_collision)) {
+		v_speed = 0;
+	}
+} else if (floors == 2) {
+	if (instance_place(x + h_speed,y,obj_collision2)) {
+		h_speed = 0;
+	}
+
+	if (instance_place(x,y + v_speed,obj_collision2)) {
+		v_speed = 0;
+	}
 }
 
-if (instance_place(x,y + v_speed,obj_collision)) {
-	v_speed = 0;
+if (instance_place(x,y,obj_floor2)) {
+	floors = 2;
 }
+if (instance_place(x,y,obj_floor1)) {
+	floors = 1;
+}
+
 
 x += h_speed;
 y += v_speed;
@@ -117,7 +140,7 @@ if (role == 1) {
 	if (skill_button_status) {
 		if (!powering) {
 			powering = true;
-			power_object = instance_create_layer(x,y,"Powers",obj_power01);
+			power_object = instance_create_layer(x,y,(floors==1)?"Powers":"Powers_uplayer",obj_power01);
 		} else {
 			if (power_amount < 100) {
 				power_amount ++;
@@ -155,7 +178,7 @@ if (role == 1) {
 	if (skill_button_status) {
 		if (!powering) {
 			powering = true;
-			power_object = instance_create_layer(x,y,"Powers",obj_power02);
+			power_object = instance_create_layer(x,y,(floors==1)?"Powers":"Powers_uplayer",obj_power02);
 		} else {
 			if (power_amount < 100) {
 				power_amount ++;

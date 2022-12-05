@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_floor2",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_upper",
+    "path": "sprites/spr_upper/spr_upper.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

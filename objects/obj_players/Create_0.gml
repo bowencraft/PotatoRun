@@ -14,6 +14,8 @@ player_fric = 0.7;
 h_speed = 0;
 v_speed = 0;
 
+floors = 1;
+
 powering = false;
 power_amount = 0;
 
@@ -28,6 +30,6 @@ potato = noone;
 potato_inline_sprite = spr_player01;
 potato_outline_sprite = spr_player01_outline;
 
-ghost_sprite = spr_ch14;
+ghost_sprite = spr_ghost;
 
 shake_time = 60;

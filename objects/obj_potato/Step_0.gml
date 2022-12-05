@@ -38,6 +38,11 @@ if (potato_player != -1) {
 }
 
 
+if (potato_player.floors == 1){
+	depth = -y+32;
 
-depth = -y+32;
+} else {
+
+	depth = - 1200 - y+32;
+}
 
