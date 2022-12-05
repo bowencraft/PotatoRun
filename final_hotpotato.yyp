@@ -68,6 +68,7 @@
     {"id":{"name":"spr_ch15","path":"sprites/spr_ch15/spr_ch15.yy",},"order":14,},
     {"id":{"name":"press_to_join","path":"sprites/press_to_join/press_to_join.yy",},"order":9,},
     {"id":{"name":"obj_sign_change","path":"objects/obj_sign_change/obj_sign_change.yy",},"order":9,},
+    {"id":{"name":"font_pixel_mini_ingame","path":"fonts/font_pixel_mini_ingame/font_pixel_mini_ingame.yy",},"order":1,},
     {"id":{"name":"spr_ch11","path":"sprites/spr_ch11/spr_ch11.yy",},"order":10,},
     {"id":{"name":"script_shake","path":"scripts/script_shake/script_shake.yy",},"order":0,},
     {"id":{"name":"spr_ch13","path":"sprites/spr_ch13/spr_ch13.yy",},"order":12,},

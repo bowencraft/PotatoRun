@@ -8,8 +8,10 @@ for (var i =0; i<ds_list_size(obj_gameroom_manager.alive_ls); i++) {
 		break;
 	}
 }
+show_debug_message(potato_player);
 
 if (potato_player != -1) {
+	
 	sprite_index = potato_inline_sprite;
 	if (obj_time_manager.game_timer < 5 * room_speed) {
 		if (obj_time_manager.game_timer % 15 > 7) {
