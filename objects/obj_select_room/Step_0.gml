@@ -21,7 +21,7 @@ if (player_amount >= 2) {
 	if (all_ready) {
 		show_debug_message("Game start!");
 		//alarm[0] = 1*room_speed;
-		room_goto(PlayRoom_2);
+		room_goto(Room_transition);
 	}
 }
 

@@ -58,7 +58,6 @@ if (player_amount == 1) {
 		} 
 	}
 	
-	
 } else if (player_amount == 2) {
 	plr1_x = plr_origin_x - 0.5 * plr_sprite_size - 0.5 * plr_interval_2;
 	plr2_x = plr_origin_x + 0.5 * plr_interval_2;

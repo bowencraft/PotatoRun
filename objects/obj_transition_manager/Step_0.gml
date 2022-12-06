@@ -2,6 +2,5 @@
 // 你可以在此编辑器中写入代码 
 
 
-
-room_goto(Room_transition);
+//temp_player = ds_list_find_value(player_ls,0);
 
