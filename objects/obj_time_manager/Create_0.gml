@@ -4,3 +4,6 @@
 game_time = 60;
 game_timer = game_time * room_speed;
 dizzy_timer = game_timer;
+dizzy_status = false;
+dizzy_long = 10;
+screenshaking = false;

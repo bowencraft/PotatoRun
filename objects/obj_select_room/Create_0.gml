@@ -3,12 +3,12 @@
 
 
 
-char_origin_x = room_width / 2 + 32;
-char_origin_y = 320 + 64;
+char_origin_x = room_width / 2 + 36;
+char_origin_y = 320 + 72;
 x_intervel = 32;
 y_intervel = 32;
-sprite_size = 64;
-sprite_scale = 4;
+sprite_size = 72;
+sprite_scale = 3;
 
 
 /** ---
@@ -28,7 +28,7 @@ plr_interval_3 = 96;
 plr_interval_4 = 48;
 
 plr_sprite_size = 96;
-plr_sprite_scale = 6;
+plr_sprite_scale = 4;
 
 
 

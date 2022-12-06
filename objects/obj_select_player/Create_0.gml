@@ -54,8 +54,8 @@ sel = 15;
 box_x = char_spr_x_1;
 box_y = char_spr_y_1;
 
-box_offset_x = -32;
-box_offset_y = -64;
+box_offset_x = -36;
+box_offset_y = -72;
 
 
 box_goal_x = char_spr_x_1;

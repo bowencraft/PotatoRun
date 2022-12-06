@@ -30,6 +30,8 @@ potato = noone;
 potato_inline_sprite = spr_player01;
 potato_outline_sprite = spr_player01_outline;
 
-ghost_sprite = spr_ghost;
+ghost_sprite = creature_ghost;
 
 shake_time = 60;
+image_xscale = 0.75;
+image_yscale = 0.75;

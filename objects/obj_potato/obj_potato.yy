@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Ingame_items",
-    "path": "folders/Objects/Ingame_items.yy",
+    "name": "Ingame",
+    "path": "folders/Objects/Ingame.yy",
   },
 }

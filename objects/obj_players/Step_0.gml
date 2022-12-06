@@ -34,14 +34,14 @@ if (input_method == 0 ||input_method == 1) {
 		}
 		if (keyboard_check(left_button)) {
 			h_speed = -player_spd;
-			image_xscale = -1;
+			image_xscale = -0.75;
 		}
 		if (keyboard_check(down_button)) {
 			v_speed = player_spd;
 		}
 		if (keyboard_check(right_button)) {
 			h_speed = player_spd;
-			image_xscale = 1;
+			image_xscale = 0.75;
 		}
 	}
 } else if (input_method == 2 ||input_method == 3) {
@@ -71,6 +71,7 @@ if (role == 1) {
 		// explode
 		role = 2;
 		instance_create_layer(x,y,"Assets",obj_exploded);
+		//ds_list_delete(obj_gameroom_manager.alive_ls,self);
 	}
 } else if (role == 0) {
 	sprite_index = script_char(character);
@@ -137,7 +138,7 @@ x += h_speed;
 y += v_speed;
 
 if (role == 1) {
-	if (skill_button_status) {
+	if (skill_button_status && !dizzy) {
 		if (!powering) {
 			powering = true;
 			power_object = instance_create_layer(x,y,(floors==1)?"Powers":"Powers_uplayer",obj_power01);
@@ -158,7 +159,7 @@ if (role == 1) {
 		
 		
 		instance_destroy(power_object);
-		obj_time_manager.dizzy_timer = obj_time_manager.game_timer - shake_time;
+		//obj_time_manager.dizzy_timer = obj_time_manager.game_timer - shake_time;
 		powering = false;	
 		power_amount = 0;
 		power_object = noone;
@@ -175,7 +176,7 @@ if (role == 1) {
 	}
 	
 } else {
-	if (skill_button_status) {
+	if (skill_button_status && !dizzy) {
 		if (!powering) {
 			powering = true;
 			power_object = instance_create_layer(x,y,(floors==1)?"Powers":"Powers_uplayer",obj_power02);
@@ -196,7 +197,7 @@ if (role == 1) {
 		
 		
 		instance_destroy(power_object);
-		obj_time_manager.dizzy_timer = obj_time_manager.game_timer - shake_time;
+		//obj_time_manager.dizzy_timer = obj_time_manager.game_timer - shake_time;
 		powering = false;	
 		power_amount = 0;
 		power_object = noone;

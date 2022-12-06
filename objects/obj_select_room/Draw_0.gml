@@ -3,21 +3,21 @@
 
 
 
-draw_sprite_ext(spr_ch01,0,char_spr_x_1,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch02,0,char_spr_x_2,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch03,0,char_spr_x_3,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch04,0,char_spr_x_4,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch05,0,char_spr_x_5,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch06,0,char_spr_x_1,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch07,0,char_spr_x_2,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch08,0,char_spr_x_3,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch09,0,char_spr_x_4,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch10,0,char_spr_x_5,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch11,0,char_spr_x_1,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch12,0,char_spr_x_2,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch13,0,char_spr_x_3,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch14,0,char_spr_x_4,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
-draw_sprite_ext(spr_ch15,0,char_spr_x_5,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(1),0,char_spr_x_1,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(2),0,char_spr_x_2,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(3),0,char_spr_x_3,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(4),0,char_spr_x_4,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(5),0,char_spr_x_5,char_spr_y_1,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(6),0,char_spr_x_1,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(7),0,char_spr_x_2,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(8),0,char_spr_x_3,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(9),0,char_spr_x_4,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(10),0,char_spr_x_5,char_spr_y_2,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(11),0,char_spr_x_1,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(12),0,char_spr_x_2,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(13),0,char_spr_x_3,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(14),0,char_spr_x_4,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
+draw_sprite_ext(script_char(15),0,char_spr_x_5,char_spr_y_3,sprite_scale,sprite_scale,0,c_white,1);
 
 draw_set_font(font_pixel_mini);
 draw_sprite_ext(leave,0,0,room_height - 80,1,1,0,c_white,1);

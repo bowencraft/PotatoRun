@@ -3,12 +3,16 @@
 
 for (var i =0; i<ds_list_size(obj_gameroom_manager.alive_ls); i++) {
 	if (obj_gameroom_manager.alive_ls[|i].role == 1) {
-	
+		
+		visible = true;
 		potato_player = obj_gameroom_manager.alive_ls[|i];
 		break;
+	} else if (obj_gameroom_manager.alive_ls[|i].role == 2) {
+		
+		visible = false;
 	}
 }
-show_debug_message(potato_player);
+//show_debug_message(potato_player);
 
 if (potato_player != -1) {
 	
@@ -34,7 +38,7 @@ if (potato_player != -1) {
 	}
 	
 	x = lerp(x,potato_player.x,0.7);
-	y = lerp(y,potato_player.y-8,0.7);
+	y = lerp(y,potato_player.y - 10,0.7);
 } else {
 	visible = false;
 }
