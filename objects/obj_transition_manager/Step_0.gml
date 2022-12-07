@@ -1,7 +1,11 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
 
+for (var i=0;i<ds_list_size(obj_parameters.role_ls);i++) {
+	
+	ds_list_set(obj_parameters.role_ls,i,0);
 
+}
 //temp_player = ds_list_find_value(player_ls,0);
 
 if (choose_map_index == 0) {
@@ -40,6 +44,6 @@ if (randoming){
 		randoming = false;
 		show_debug_message("Map choosed!");
 		
-		alarm[0] = 1 * room_speed;
+		alarm[0] = 2 * room_speed;
 	}
 }

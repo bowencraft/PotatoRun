@@ -159,7 +159,7 @@ if (role == 1) {
 		
 		
 		instance_destroy(power_object);
-		//obj_time_manager.dizzy_timer = obj_time_manager.game_timer - shake_time;
+		obj_time_manager.dizzy_status = true;
 		powering = false;	
 		power_amount = 0;
 		power_object = noone;
@@ -197,7 +197,7 @@ if (role == 1) {
 		
 		
 		instance_destroy(power_object);
-		//obj_time_manager.dizzy_timer = obj_time_manager.game_timer - shake_time;
+		obj_time_manager.dizzy_status = true;
 		powering = false;	
 		power_amount = 0;
 		power_object = noone;

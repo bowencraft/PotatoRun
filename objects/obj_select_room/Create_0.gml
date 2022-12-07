@@ -2,6 +2,9 @@
 // 你可以在此编辑器中写入代码 
 
 
+audio_play_sound(dungeon_boss,0,true);
+
+
 
 char_origin_x = room_width / 2 + 36;
 char_origin_y = 320 + 72;
