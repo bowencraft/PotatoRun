@@ -7,13 +7,13 @@ itch.io page: https://bowenwang0620.itch.io/powerpotato
 
 ## To-do List:
 
-- [ ] Different Maps (tiles)
+- [x] Different Maps (tiles)
 - [ ] Main Menu & Setting page
-- [ ] Different characters animation
-- [ ] ability cooldown
+- [x] Different characters animation
+- [x] ability cooldown
 - [ ] Screen vibration
-- [ ] Win page
-- [ ] Transition sequence animation
+- [x] Win page
+- [x] Transition sequence animation
 - [ ] Countdown before start
-- [ ] Tutorial & description
-- [ ] Ghost not affected by obstacles after changing, can't get out of the map, no skills
+- [x] Tutorial & description
+- [ ] ~~Ghost not affected by obstacles after changing, can't get out of the map, no skills~~
