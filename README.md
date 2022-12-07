@@ -1,5 +1,5 @@
 # PotatoRun
-<img src="https://raw.githubusercontent.com/bowencraft/PotatoRun/main/images/pic_valcano01.png" alt="pic_valcano01"  />
+<img src="https://raw.githubusercontent.com/bowencraft/PotatoRun/main/images/pic_valcano01.png" alt="pic_valcano01" style="zoom:150%;" />
 
 A local multiplayer game with "Hot Potato". In the game, players need to control their characters to move, release the skill to dizzy others and pass the potato. When the timer count to 0, the player holding potato will explode.
 
