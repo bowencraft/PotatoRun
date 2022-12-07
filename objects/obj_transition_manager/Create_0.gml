@@ -4,17 +4,27 @@ player_index_ls = obj_parameters.player_index_ls;
 character_ls = obj_parameters.character_ls;
 role_ls = obj_parameters.role_ls;
 
-player_amount = 1;
+player_amount = obj_parameters.player_amount;
 
-plr_sprite_size = 48;
-plr_sprite_scale = 2;
+plr_sprite_size = 96;
+plr_sprite_scale = 4;
 
-plr_axis_x1 = 100;
-plr_axis_x2 = 200;
+plr_axis_x1 = 140;
+plr_axis_x2 = 400;
 
-plr_axis_y1 = 100;
-plr_axis_y2 = 200;
+plr_axis_y1 = 340;
+plr_axis_y2 = 515;
 
+image_frame = 0;
+room_run_tick = 0;
 
+choose_map_index = 0;
+choose_map = noone;
+choose_map_sprite = noone;
 
+map_timer = 0;
+map_interval = 0;
+map_count = 10;
+map_counter = 0;
 
+randoming = true;

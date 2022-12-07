@@ -4,7 +4,7 @@ draw_set_font(font_pixel_mini_ingame);
 
 text_width = string_width("P" + string(player_index + 1));
 	draw_text_color(x - text_width/2,y-1,
-	"P" + string(player_index + 1),c_white,c_white,c_white,c_white,1);
+	"P" + string(player_index + 1),c_black,c_black,c_black,c_black,1);
 
 draw_self();
 

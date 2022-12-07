@@ -24,7 +24,7 @@ for (var i =0;i<instance_number(obj_players);i++) {
 
 cam_width = lerp(cam_width, min(280,max(cam_max_x - cam_min_x, cam_max_y - cam_min_y)) / 1.5 + 400, 0.05);
 //show_debug_message(string(cam_max_x - cam_min_x) + ", " + string(cam_max_y - cam_min_y))
-cam_height = cam_width / 1.6;
+cam_height = cam_width / 1.77733;
 camera_set_view_size(view_camera[0],cam_width,cam_height);
 
 x = lerp(x,x_total/plr_num,0.1);

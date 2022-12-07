@@ -10,7 +10,8 @@ y_intervel = 32;
 sprite_size = 72;
 sprite_scale = 3;
 
-
+image_frame = 0;
+ready_togo = false;
 /** ---
 players join & select
 - input method: 0 - WASD 1 - ARRW 2 - GMPD0 3 - GMPD1 4 - AI

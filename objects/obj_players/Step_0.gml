@@ -48,16 +48,16 @@ if (input_method == 0 ||input_method == 1) {
 	if ((!skill_button_status) && !dizzy) {
 		//show_debug_message(string(gamepad_ver) + ", " + string(gamepad_hor));
 		if (abs(gamepad_ver) > 0.1) {
-			v_speed = gamepad_ver *2;
+			v_speed = gamepad_ver * 1.1 * player_spd;
 		}
 		if (abs(gamepad_hor) > 0.1) {
-			h_speed = gamepad_hor *2;
+			h_speed = gamepad_hor * 1.1 * player_spd;
 		}
 		
 		if (gamepad_axis_value(0, gamepad_hor) < 0.1) {
-			image_xscale = -1;
+			image_xscale = -0.75;
 		} else if (gamepad_axis_value(0, gamepad_hor) > 0.1) {
-			image_xscale = 1;
+			image_xscale = 0.75;
 		}
 	
 	}
