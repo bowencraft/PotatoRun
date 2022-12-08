@@ -20,10 +20,16 @@ if (player_amount >= 2) {
 		if (temp_player.ready_status == false)	all_ready = false;
 	}
 	if (all_ready) {
-		show_debug_message("Game start!");
 		if (!ready_togo) {
+			show_debug_message("Game start!");
 			ready_togo = true;
-			alarm[0] = 1*room_speed;
+			
+			// transition_ fade out
+			show_debug_message("transition_ fade out");
+			obj_fade.fade_out = true;
+			obj_fade.fade_out_duration = 30;
+			
+			alarm[0] = 1.5*room_speed;
 		
 		}
 	}

@@ -26,3 +26,7 @@ potato_player = ds_list_find_value(alive_ls,irandom(ds_list_size(alive_ls) - 1))
 potato_player.role = 1;
 
 instance_create_layer(potato_player.x,potato_player.y-32,"Players",obj_potato);
+
+show_debug_message("transition_ fade in");
+obj_fade.fade_in = true;
+obj_fade.fade_in_duration = 30;

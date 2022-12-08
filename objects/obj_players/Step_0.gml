@@ -3,6 +3,7 @@
 
 if (input_method == 0) {
 	skill_button_status = (keyboard_check(vk_space)) ? true : false;
+	skill_button_released_status = (keyboard_check_released(vk_space)) ? true : false;
 	up_button = ord("W");
 	left_button = ord("A");
 	down_button = ord("S");
@@ -10,6 +11,7 @@ if (input_method == 0) {
 	
 } else if (input_method == 1) {
 	skill_button_status = (keyboard_check(vk_enter)) ? true : false;
+	skill_button_released_status = (keyboard_check_released(vk_enter)) ? true : false;
 	up_button = vk_up;
 	left_button = vk_left;
 	down_button = vk_down;
@@ -17,11 +19,13 @@ if (input_method == 0) {
 	
 } else if (input_method == 2) {
 	skill_button_status = (gamepad_button_check(0,gp_face1)) ? true : false;
+	skill_button_released_status = (gamepad_button_check_released(0,gp_face1)) ? true : false;
 	gamepad_ver = gamepad_axis_value(0, gp_axislv);
 	gamepad_hor = gamepad_axis_value(0, gp_axislh);
 
 } else if (input_method == 3) {
 	skill_button_status = (gamepad_button_check(1,gp_face1)) ? true : false;
+	skill_button_released_status = (gamepad_button_check_released(1,gp_face1)) ? true : false;
 	gamepad_ver = gamepad_axis_value(1, gp_axislv);
 	gamepad_hor = gamepad_axis_value(1, gp_axislh);
 	
@@ -71,6 +75,7 @@ if (role == 1) {
 		// explode
 		role = 2;
 		instance_create_layer(x,y,"Assets",obj_exploded);
+		show_debug_message("exploded");
 		//ds_list_delete(obj_gameroom_manager.alive_ls,self);
 	}
 } else if (role == 0) {
@@ -157,9 +162,7 @@ if (role == 1) {
 		
 	} else {
 		
-		
 		instance_destroy(power_object);
-		obj_time_manager.dizzy_status = true;
 		powering = false;	
 		power_amount = 0;
 		power_object = noone;
@@ -168,10 +171,18 @@ if (role == 1) {
 			potato.role = 1;
 			role = 0;
 			
+			obj_time_manager.dizzy_status = true;
+			obj_time_manager.dizzy_magn = 10;
 			potato.dizzy = true;
 			potato.dizzy_timer = dizzy_time * room_speed;
-			instance_create_layer(potato.x,potato.y,"Assets",obj_sign_change);
+			for (var i=0; i<6; i++) {
+				instance_create_layer(potato.x,potato.y,"Assets",obj_sign_change);
+			}
 			potato = noone;
+		} else if (skill_button_released_status) {
+			obj_time_manager.dizzy_status = true;
+			obj_time_manager.dizzy_magn = 3;
+			
 		}
 	}
 	
@@ -197,7 +208,6 @@ if (role == 1) {
 		
 		
 		instance_destroy(power_object);
-		obj_time_manager.dizzy_status = true;
 		powering = false;	
 		power_amount = 0;
 		power_object = noone;
@@ -206,9 +216,17 @@ if (role == 1) {
 			
 			potato.dizzy = true;
 			potato.dizzy_timer = dizzy_time * room_speed;
-			
-			instance_create_layer(potato.x,potato.y,"Assets",obj_bump);
+			obj_time_manager.dizzy_status = true;
+			obj_time_manager.dizzy_magn = 10;
+			for (var i=0; i<6;  i++) {
+				instance_create_layer(potato.x,potato.y,"Assets",obj_bump);
+			}
 			potato = noone;
+		} else if (skill_button_released_status) {
+			obj_time_manager.dizzy_status = true;
+			obj_time_manager.dizzy_magn = 3;
+			
 		}
+		
 	}
 }

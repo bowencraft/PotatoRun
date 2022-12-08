@@ -30,3 +30,9 @@ map_count = 10;
 map_counter = 0;
 
 randoming = true;
+
+// transition_ fade in
+
+show_debug_message("transition_ fade in");
+obj_fade.fade_in = true;
+obj_fade.fade_in_duration = 30;

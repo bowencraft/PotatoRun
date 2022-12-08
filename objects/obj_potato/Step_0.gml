@@ -31,12 +31,13 @@ if (potato_player != -1) {
 		}
 	
 	}
-	if (obj_time_manager.game_timer == 0) {
-		// explode
-		role = 2;
-		instance_create_layer(x,y,"Assets",obj_exploded);
+	//if (obj_time_manager.game_timer == 0) {
+	//	// explode
+	//	show_debug_message("exploded");
+	//	role = 2;
+	//	instance_create_layer(x,y,"Assets",obj_exploded);
 		
-	}
+	//}
 	
 	x = lerp(x,potato_player.x,0.7);
 	y = lerp(y,potato_player.y - 10,0.7);

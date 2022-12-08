@@ -6,4 +6,10 @@ game_timer = game_time * room_speed;
 dizzy_timer = game_timer;
 dizzy_status = false;
 dizzy_long = 10;
-screenshaking = false;
+
+dizzy_magn = 10;
+
+potato_player = noone;
+
+c_lightgrey = make_color_rgb(230,230,230);
+c_textcolor = c_lightgrey;

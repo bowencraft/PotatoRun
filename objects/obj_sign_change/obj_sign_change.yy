@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_sign_change",
   "spriteId": {
-    "name": "spr_potato_change",
-    "path": "sprites/spr_potato_change/spr_potato_change.yy",
+    "name": "spr_change",
+    "path": "sprites/spr_change/spr_change.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,7 +27,6 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

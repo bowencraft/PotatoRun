@@ -50,6 +50,7 @@ if (randoming){
 		randoming = false;
 		show_debug_message("Map choosed!");
 		
-		alarm[0] = 2 * room_speed;
+		alarm[1] = 2 * room_speed;
+		alarm[0] = 3 * room_speed;
 	}
 }

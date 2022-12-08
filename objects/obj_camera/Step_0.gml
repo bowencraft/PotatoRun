@@ -22,13 +22,25 @@ for (var i =0;i<instance_number(obj_players);i++) {
 	
 }
 
-cam_width = lerp(cam_width, min(280,max(cam_max_x - cam_min_x, cam_max_y - cam_min_y)) / 1.5 + 400, 0.05);
-//show_debug_message(string(cam_max_x - cam_min_x) + ", " + string(cam_max_y - cam_min_y))
-cam_height = cam_width / 1.77733;
-camera_set_view_size(view_camera[0],cam_width,cam_height);
+if (obj_time_manager.game_timer >= 0) {
+	
+	x = lerp(x,x_total/plr_num,0.1);
+	y = lerp(y,y_total/plr_num ,0.1);
+	
 
-x = lerp(x,x_total/plr_num,0.1);
-y = lerp(y,y_total/plr_num ,0.1);
+} else {
+	
+		x = lerp(x,obj_time_manager.potato_player.x,0.1);
+		y = lerp(y,obj_time_manager.potato_player.y,0.1);
+		extra_size -= 0.25;
+
+}
+
+
+	cam_width = lerp(cam_width, extra_size + min(280,max(cam_max_x - cam_min_x, cam_max_y - cam_min_y)) / 1.5 + 400, 0.05);
+	//show_debug_message(string(cam_max_x - cam_min_x) + ", " + string(cam_max_y - cam_min_y))
+	cam_height = cam_width / 1.77733;
+	camera_set_view_size(view_camera[0],cam_width,cam_height);
 
 
 
