@@ -12,6 +12,7 @@ player_index = 0;
 input_method = 0;
 
 role = 0;
+scores = 0;
 
 sel_x = 0; // 0-2
 sel_y = 0; // 0-4

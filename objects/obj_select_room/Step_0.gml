@@ -9,6 +9,7 @@ for (var i=0;i<ds_list_size(player_ls);i++) {
 	ds_list_set(player_index_ls,i,player_ls[|i].player_index);
 	ds_list_set(character_ls,i,player_ls[|i].sel);
 	ds_list_set(role_ls,i,player_ls[|i].role);
+	ds_list_set(score_ls,i,player_ls[|i].scores);
 
 }
 
@@ -77,5 +78,6 @@ obj_parameters.input_method_ls = input_method_ls;
 obj_parameters.player_index_ls = player_index_ls;
 obj_parameters.character_ls = character_ls;
 obj_parameters.role_ls = role_ls;
+obj_parameters.score_ls = score_ls;
 
 obj_parameters.player_amount = player_amount;

@@ -7,6 +7,7 @@ input_method_ls = ds_list_create();
 player_index_ls = ds_list_create();
 character_ls = ds_list_create();
 role_ls = ds_list_create();
+score_ls = ds_list_create();
 
 player_amount = 0;
 choose_map_index = 0;

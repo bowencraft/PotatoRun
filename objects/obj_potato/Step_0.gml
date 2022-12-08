@@ -35,6 +35,7 @@ if (potato_player != -1) {
 		// explode
 		role = 2;
 		instance_create_layer(x,y,"Assets",obj_exploded);
+		
 	}
 	
 	x = lerp(x,potato_player.x,0.7);

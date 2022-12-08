@@ -30,4 +30,11 @@ if (dizzy_status) {
 //	layer_clear_fx("Effect_1");
 //}
 
-
+if (game_timer == -1) {
+	for (var i =0;i < obj_parameters.player_amount; i++) {
+		potato_player = obj_gameroom_manager.alive_ls[|i];
+		if (potato_player.role != 2) {
+			obj_parameters.score_ls[|i] ++;
+		}
+	}
+}
