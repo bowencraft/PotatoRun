@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_transition_manager",
-  "spriteId": null,
+  "spriteId": {
+    "name": "bg_transition",
+    "path": "sprites/bg_transition/bg_transition.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

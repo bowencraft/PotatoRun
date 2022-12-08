@@ -2,6 +2,9 @@
 // 你可以在此编辑器中写入代码 
 
 room_run_tick ++;
+
+draw_self();
+
 if (room_run_tick % 10 == 0) {
 	if (image_frame == 4) {
 		image_frame = 0;

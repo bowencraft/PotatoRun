@@ -8,19 +8,19 @@ for (var i=0;i<ds_list_size(obj_parameters.role_ls);i++) {
 }
 //temp_player = ds_list_find_value(player_ls,0);
 
-if (choose_map_index == 0) {
+if (obj_parameters.maps_ls[|choose_map_index] == 0) {
 	choose_map = PlayRoom_desert01;
 	choose_map_sprite = pic_desert01;
-} else if (choose_map_index == 1) {
+} else if (obj_parameters.maps_ls[|choose_map_index] == 1) {
 	choose_map = PlayRoom_desert02;
 	choose_map_sprite = pic_desert02;
-} else if (choose_map_index == 2) {
+} else if (obj_parameters.maps_ls[|choose_map_index] == 2) {
 	choose_map = PlayRoom_glacier01;
 	choose_map_sprite = pic_glacier01;
-} else if (choose_map_index == 3) {
+} else if (obj_parameters.maps_ls[|choose_map_index] == 3) {
 	choose_map = PlayRoom_plain01;
 	choose_map_sprite = pic_plain01;
-} else if (choose_map_index == 4) {
+} else if (obj_parameters.maps_ls[|choose_map_index] == 4) {
 	choose_map = PlayRoom_volcano01;
 	choose_map_sprite = pic_valcano01;
 }
@@ -40,7 +40,13 @@ if (randoming){
 			map_counter ++;
 		}
 	} else {
-		choose_map_index = irandom(4);
+		
+		if (obj_parameters.choose_map_index < 5) {
+			obj_parameters.choose_map_index ++;
+		} else {
+			obj_parameters.choose_map_index = 0;
+		}
+		//choose_map_index = irandom(4);
 		randoming = false;
 		show_debug_message("Map choosed!");
 		

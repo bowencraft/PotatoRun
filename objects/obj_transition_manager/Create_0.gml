@@ -20,7 +20,7 @@ plr_axis_y2 = 515;
 image_frame = 0;
 room_run_tick = 0;
 
-choose_map_index = 0;
+choose_map_index = obj_parameters.choose_map_index;
 choose_map = noone;
 choose_map_sprite = noone;
 

@@ -100,7 +100,6 @@
     {"id":{"name":"creature09","path":"sprites/creature09/creature09.yy",},"order":8,},
     {"id":{"name":"creature15","path":"sprites/creature15/creature15.yy",},"order":14,},
     {"id":{"name":"creature02","path":"sprites/creature02/creature02.yy",},"order":1,},
-    {"id":{"name":"obj_transbackground","path":"objects/obj_transbackground/obj_transbackground.yy",},"order":1,},
     {"id":{"name":"font_pixel_mini_ingame","path":"fonts/font_pixel_mini_ingame/font_pixel_mini_ingame.yy",},"order":1,},
     {"id":{"name":"spr_ch11","path":"sprites/spr_ch11/spr_ch11.yy",},"order":10,},
     {"id":{"name":"proto_tilemap_glacier","path":"tilesets/proto_tilemap_glacier/proto_tilemap_glacier.yy",},"order":2,},
