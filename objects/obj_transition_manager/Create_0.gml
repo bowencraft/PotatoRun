@@ -20,7 +20,13 @@ plr_axis_y2 = 515;
 image_frame = 0;
 room_run_tick = 0;
 
+if (obj_parameters.choose_map_index < 5) {
+		obj_parameters.choose_map_index ++;
+	} else {
+		obj_parameters.choose_map_index = 0;
+}
 choose_map_index = obj_parameters.choose_map_index;
+
 choose_map = noone;
 choose_map_sprite = noone;
 
@@ -35,4 +41,4 @@ randoming = true;
 
 show_debug_message("transition_ fade in");
 obj_fade.fade_in = true;
-obj_fade.fade_in_duration = 30;
+obj_fade.fade_in_duration = 15;

@@ -6,6 +6,7 @@
 
 
 if (input_method == 0) {
+	sel_box = spr_selbox_01;
 
 	if (keyboard_check_pressed(vk_space)) {
 		if (!ready_status) {
@@ -74,6 +75,7 @@ if (input_method == 0) {
 		}
 	}
 } else if (input_method == 1) {
+	sel_box = spr_selbox_02;
 
 	if (keyboard_check_pressed(vk_enter)) {
 		if (!ready_status) {
@@ -141,6 +143,7 @@ if (input_method == 0) {
 		}
 	}
 } else if (input_method == 2) {
+	sel_box = spr_selbox_03;
 
 	if (gamepad_button_check_pressed(0,gp_face1)) {
 		if (!ready_status) {
@@ -235,6 +238,7 @@ if (input_method == 0) {
 		}
 	}
 } else if (input_method == 3) {
+	sel_box = spr_selbox_04;
 	
 	if (gamepad_button_check_pressed(1,gp_face1)) {
 		if (!ready_status) {

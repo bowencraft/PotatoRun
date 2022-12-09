@@ -10,6 +10,7 @@ players join & select
 
 player_index = 0;
 input_method = 0;
+sel_box = spr_selbox_01;
 
 role = 0;
 scores = 0;

@@ -5,7 +5,7 @@
 // transition_ fade out
 show_debug_message("transition_ fade out");
 obj_fade.fade_out = true;
-obj_fade.fade_out_duration = 60;
+obj_fade.fade_out_duration = 30;
 
 
 

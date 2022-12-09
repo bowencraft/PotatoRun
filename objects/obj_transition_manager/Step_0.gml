@@ -41,11 +41,7 @@ if (randoming){
 		}
 	} else {
 		
-		if (obj_parameters.choose_map_index < 5) {
-			obj_parameters.choose_map_index ++;
-		} else {
-			obj_parameters.choose_map_index = 0;
-		}
+		
 		//choose_map_index = irandom(4);
 		randoming = false;
 		show_debug_message("Map choosed!");
