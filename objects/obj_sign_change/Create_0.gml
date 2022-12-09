@@ -10,6 +10,6 @@ y_velocity = sin(angle)*velocity;
 
 timer = 0;
 
-times = 120;
+times = 40;
 
 

@@ -176,7 +176,7 @@ if (role == 1) {
 			potato.dizzy = true;
 			potato.dizzy_timer = dizzy_time * room_speed;
 			for (var i=0; i<6; i++) {
-				instance_create_layer(potato.x,potato.y,"Assets",obj_sign_change);
+				instance_create_layer(potato.x,potato.y - 16,"Assets",obj_sign_change);
 			}
 			potato = noone;
 		} else if (skill_button_released_status) {
@@ -219,7 +219,7 @@ if (role == 1) {
 			obj_time_manager.dizzy_status = true;
 			obj_time_manager.dizzy_magn = 10;
 			for (var i=0; i<6;  i++) {
-				instance_create_layer(potato.x,potato.y,"Assets",obj_bump);
+				instance_create_layer(potato.x,potato.y - 16,"Assets",obj_bump);
 			}
 			potato = noone;
 		} else if (skill_button_released_status) {
