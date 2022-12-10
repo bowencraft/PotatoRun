@@ -9,7 +9,7 @@ This is a local multiplayer game inspired by the phrase "Hot Potato". In the gam
 
 This is the final project for the 2022 Fall - Intro to Game Dev course.
 
-For more details, screenshots, and HTML playable game: [PotatoRun](https://bowenwang0620.itch.io/potatorun)
+For more details, screenshots, and HTML playable game, visit: [itch.io Page: PotatoRun](https://bowenwang0620.itch.io/potatorun)
 
 <br />
 
