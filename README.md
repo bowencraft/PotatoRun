@@ -1,33 +1,19 @@
 # PotatoRun
-<img src="https://raw.githubusercontent.com/bowencraft/PotatoRun/main/images/banner_potato.png" alt="Cover" style="zoom:100%;" />
+<img src="https://raw.githubusercontent.com/bowencraft/PotatoRun/main/images/banner_potato.png" alt="Cover" style="zoom:150%;" />
 
-### Description
+## Description
 
 This is a local multiplayer game inspired by the phrase "Hot Potato". In the game, players need to control their characters to move, release the skill to dizzy others and pass the potato. When the timer count to 0, the player holding potato will explode.
 
 <br />
 
-itch.io page with screenshots and HTML5 playable game: [PotatoRun](https://bowenwang0620.itch.io/potatorun)
+This is the final project for the 2022 Fall - Intro to Game Dev course.
+
+For more details, screenshots, and HTML playable game: [PotatoRun](https://bowenwang0620.itch.io/potatorun)
 
 <br />
 
-### Control instruction:
-
-WASD keys / SPACE to attack / Q to leave or quit
-
-Arrow keys / ENTER to attack / M to leave or quit
-
-Controller Joystick / Button A to attack / B to leave or quit
-
-Maximum support 4 players play at the same time.
-
-<br />
-
-This is the final project for 2022 Fall - Intro to Game Dev course.
-
-<br />
-
-### Acknowledgments
+## Acknowledgments
 
 The class is over! Thanks to the instructor Darwin, and the teaching assistant, Camren, for supporting me with code and ideas, and always responding quickly.
 
@@ -37,7 +23,7 @@ Enjoy this game!
 
 <br />
 
-### Copyright Information:
+## Copyright Information:
 
 - Background music: from [8-Bit Dungeon](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1200067)
 - Sprite tile sheets: modified from [Tiny Dungeon](https://www.kenney.nl/assets/tiny-dungeon)
