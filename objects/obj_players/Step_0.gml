@@ -104,6 +104,14 @@ if (dizzy) {
 	}
 }
 
+if (cooldown) {
+
+	if (cooldown_timer > 0) {
+		cooldown_timer --;
+	} else {
+		cooldown = false;
+	}
+}
 
 
 if (h_speed != 0) {
@@ -143,7 +151,7 @@ x += h_speed;
 y += v_speed;
 
 if (role == 1) {
-	if (skill_button_status && !dizzy) {
+	if (skill_button_status && !dizzy && !cooldown) {
 		if (!powering) {
 			powering = true;
 			power_object = instance_create_layer(x,y,(floors==1)?"Powers":"Powers_uplayer",obj_power01);
@@ -173,6 +181,11 @@ if (role == 1) {
 			
 			obj_time_manager.dizzy_status = true;
 			obj_time_manager.dizzy_magn = 10;
+			cooldown = true;
+			cooldown_timer = dizzy_time*room_speed;
+			
+			audio_play_sound(hitHurt,0,false);
+			
 			potato.dizzy = true;
 			potato.dizzy_timer = dizzy_time * room_speed;
 			for (var i=0; i<6; i++) {
@@ -187,7 +200,7 @@ if (role == 1) {
 	}
 	
 } else {
-	if (skill_button_status && !dizzy) {
+	if (skill_button_status && !dizzy && !cooldown) {
 		if (!powering) {
 			powering = true;
 			power_object = instance_create_layer(x,y,(floors==1)?"Powers":"Powers_uplayer",obj_power02);
@@ -218,6 +231,9 @@ if (role == 1) {
 			potato.dizzy_timer = dizzy_time * room_speed;
 			obj_time_manager.dizzy_status = true;
 			obj_time_manager.dizzy_magn = 10;
+			cooldown = true;
+			cooldown_timer = dizzy_time *room_speed;
+			audio_play_sound(hitHurt,0,false);
 			for (var i=0; i<6;  i++) {
 				instance_create_layer(potato.x,potato.y - 16,"Assets",obj_bump);
 			}

@@ -30,6 +30,7 @@ if (randoming){
 		if (map_timer < map_interval * 2) {
 			map_timer ++;
 		} else {
+			audio_play_sound(hard_click,0,false);
 			if (choose_map_index < 5) {
 				choose_map_index ++;
 			} else {

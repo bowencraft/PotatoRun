@@ -6,6 +6,12 @@ if (game_timer >= -300) {
 } else {
 	room_goto(Room_transition);
 }
+
+if (game_timer == 30 * room_speed) {
+	//audio_stop_sound(dungeon_slower);
+	//audio_play_sound(dungeon_boss,0,true);
+}
+
 if (game_timer == -240) {
 
 	// transition_ fade out
@@ -42,6 +48,9 @@ if (dizzy_status) {
 if (game_timer == -1) {
 	obj_time_manager.dizzy_status = true;
 	obj_time_manager.dizzy_magn = 10;
+	
+	audio_play_sound(pixel_explosion,0,false);
+	
 	for (var i =0;i < obj_parameters.player_amount; i++) {
 		player = obj_gameroom_manager.alive_ls[|i];
 		if (player.role != 2) {
@@ -51,4 +60,7 @@ if (game_timer == -1) {
 		
 		}
 	}
+	
+	//audio_stop_sound(dungeon_boss);
+	//audio_play_sound(dungeon_slower,0,true);
 }

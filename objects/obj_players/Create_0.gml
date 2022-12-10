@@ -24,6 +24,9 @@ dizzy = false;
 dizzy_timer = 0;
 dizzy_count = 0;
 
+cooldown = false;
+cooldown_timer = 0;
+
 power_object = noone;
 potato = noone;
 
