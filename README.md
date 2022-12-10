@@ -1,5 +1,5 @@
 # PotatoRun
-<img src="https://raw.githubusercontent.com/bowencraft/PotatoRun/main/images/pic_valcano01.png" alt="pic_valcano01" style="zoom:150%;" />
+<img src="https://raw.githubusercontent.com/bowencraft/PotatoRun/main/images/cover-01.png" alt="Cover" style="zoom:100%;" />
 
 A local multiplayer game with "Hot Potato". In the game, players need to control their characters to move, release the skill to dizzy others and pass the potato. When the timer count to 0, the player holding potato will explode.
 
@@ -32,17 +32,3 @@ Thanks to my friends: Nicole Fu, Bowen J., and others, for playtesting and provi
 - 
 - 
 
-
-
-## To-do List:
-
-- [x] Different Maps (tiles)
-- [ ] Main Menu & Setting page
-- [x] Different characters animation
-- [x] ability cooldown
-- [ ] Screen vibration
-- [x] Win page
-- [x] Transition sequence animation
-- [ ] Countdown before start
-- [x] Tutorial & description
-- [ ] ~~Ghost not affected by obstacles after changing, can't get out of the map, no skills~~
