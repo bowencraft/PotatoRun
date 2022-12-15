@@ -3,7 +3,7 @@
 
 if (keyboard_check_pressed(vk_anykey))
 {
-	room_goto(Room_playerSelect);
+	room_goto(Room_transition);
 }
 
 

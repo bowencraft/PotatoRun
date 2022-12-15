@@ -29,6 +29,7 @@ choose_map_index = obj_parameters.choose_map_index;
 
 choose_map = noone;
 choose_map_sprite = noone;
+choose_map_text = noone;
 
 map_timer = 0;
 map_interval = 0;

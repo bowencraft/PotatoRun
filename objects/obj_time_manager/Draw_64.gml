@@ -26,3 +26,5 @@ if (obj_time_manager.game_timer >= 0) {
 	draw_text_color(view_wport[0] /2 - text_width / 2 ,20,text,c_textcolor,c_textcolor,c_textcolor,c_textcolor,1);
 
 }
+
+draw_sprite(leave,0,0,view_hport[0] - 72);

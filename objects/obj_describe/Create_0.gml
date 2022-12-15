@@ -6,4 +6,3 @@
 	obj_fade.fade_in_duration = 30;
 
 
-audio_play_sound(dungeon_boss,0,true);

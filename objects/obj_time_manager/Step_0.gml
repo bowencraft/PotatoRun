@@ -64,3 +64,9 @@ if (game_timer == -1) {
 	//audio_stop_sound(dungeon_boss);
 	//audio_play_sound(dungeon_slower,0,true);
 }
+
+if (keyboard_check_pressed(ord("M")) || keyboard_check_pressed(ord("Q")) || gamepad_button_check_pressed(0,gp_face2)) {
+
+	room_goto(Room_playerSelect);
+
+}

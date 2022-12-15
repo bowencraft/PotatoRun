@@ -22,6 +22,8 @@ if (timer == 315) {
 }
 
 if (timer == 330) {
-	room_goto(Room_description);
+	room_goto(Room_playerSelect);
+	audio_stop_all();
+	audio_play_sound(dungeon_boss,0,true);
 
 }

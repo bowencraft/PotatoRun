@@ -3,5 +3,5 @@
 
 
 
-room_goto(Room_transition);
+room_goto(Room_description);
 

@@ -11,18 +11,23 @@ for (var i=0;i<ds_list_size(obj_parameters.role_ls);i++) {
 if (obj_parameters.maps_ls[|choose_map_index] == 0) {
 	choose_map = PlayRoom_desert01;
 	choose_map_sprite = pic_desert01;
+	choose_map_text = "Desert 01";
 } else if (obj_parameters.maps_ls[|choose_map_index] == 1) {
 	choose_map = PlayRoom_desert02;
 	choose_map_sprite = pic_desert02;
+	choose_map_text = "Desert 02";
 } else if (obj_parameters.maps_ls[|choose_map_index] == 2) {
 	choose_map = PlayRoom_glacier01;
 	choose_map_sprite = pic_glacier01;
+	choose_map_text = "Glacier 01";
 } else if (obj_parameters.maps_ls[|choose_map_index] == 3) {
 	choose_map = PlayRoom_plain01;
 	choose_map_sprite = pic_plain01;
+	choose_map_text = "Underwater 01";
 } else if (obj_parameters.maps_ls[|choose_map_index] == 4) {
 	choose_map = PlayRoom_volcano01;
 	choose_map_sprite = pic_valcano01;
+	choose_map_text = "Valcano 01";
 }
 
 if (randoming){

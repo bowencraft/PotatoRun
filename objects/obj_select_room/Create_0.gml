@@ -83,3 +83,6 @@ player_amount = 0;
 
 //obj_fade.fade_in = true;
 //obj_fade.fade_in_duration = 30;
+	show_debug_message("select_ fade in");
+	obj_fade.fade_in = true;
+	obj_fade.fade_in_duration = 30;

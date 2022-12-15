@@ -55,7 +55,7 @@ if (player_amount > 3) {
 }
 
 draw_sprite(choose_map_sprite,0,618,267);
-
+draw_text(632,180,choose_map_text);
 
 
 
